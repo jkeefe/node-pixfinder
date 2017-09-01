@@ -1,5 +1,7 @@
 'use strict';
 
+var PImage = require('pureimage');
+
 // (HTMLImageElement | HTMLCanvasElement) -> HTMLCanvasElement
 function wrap(img) {
     if (!!(img.getContext && img.getContext('2d'))) {

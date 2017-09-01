@@ -14,6 +14,8 @@ var DisjointSet = function() {
     this._reset();
 };
 
+var PImage = require('pureimage');
+
 DisjointSet.prototype = {
     add: function (val) {
         var id = this._isPrimitive(val) ? val : this._lastId;
