@@ -635,9 +635,7 @@ function _isImgLoaded(img) {
 // (HTMLImageElement) -> HTMLCanvasElement
 function _wrapByCanvas(img) {
     if (img.tagName === 'CANVAS') { return img; }
-    var canv = document.createElement('canvas');
-    canv.width = img.width;
-    canv.height = img.height;
+    var canv = PImage.make(img.width, img.height);
     canv.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
     return canv;
 }
@@ -1432,9 +1430,7 @@ function wrap(img) {
     if (!!(img.getContext && img.getContext('2d'))) {
         return img;
     }
-    var canv = document.createElement('canvas');
-    canv.width = img.width;
-    canv.height = img.height;
+    var canv = PImage.make(img.width, img.height);
     canv.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
     return canv;
 }

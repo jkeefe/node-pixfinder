@@ -14,7 +14,8 @@ var rbush = require('rbush'),
         canvas: require('./util/canvas'),
         math: require('./util/math'),
         dom: require('./util/dom')
-    };
+    },
+    PImage = require('pureimage');
 
 // (Object) -> Array
 function find(options) {
